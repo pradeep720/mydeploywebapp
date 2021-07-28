@@ -14,7 +14,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+     - name: Save public folder
+       uses: actions/upload-artifact@v2
+       with:
+        name: public
+        path: public
 
     - name: Set up Java version
       uses: actions/setup-java@v1
